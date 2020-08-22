@@ -2,25 +2,16 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\{Model, Relations\belongsToMany};
 
-class Tag extends Model 
+class Tag extends Model
 {
-    /**
-     * @var string
-     */
-    protected $table = 'tag';
+    protected string $table = 'tag';
 
-    /**
-     * @var array
-     */
-    protected $fillable = ['name'];
+    protected array $fillable = ['name'];
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\belongsToMany
-     */
-    public function contacts()
-    {      
+    public function contacts(): belongsToMany
+    {
         return $this->belongsToMany(Contact::class);
     }
 }

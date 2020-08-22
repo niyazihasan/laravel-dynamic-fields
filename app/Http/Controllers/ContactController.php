@@ -2,114 +2,106 @@
 
 namespace App\Http\Controllers;
 
-use App\Tag;
-use App\Contact;
-use App\TelephoneNumber;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Http\{RedirectResponse, JsonResponse, Request};
+use Illuminate\View\View;
+use App\{Tag, Contact};
 use App\Http\Requests\ContactForm;
 
-class ContactController extends Controller 
+class ContactController extends Controller
 {
-    /**
-     * @return \Illuminate\Http\Response
-     */
-    protected function index() 
+    protected function index(): View
     {
-        $contacts = Contact::all();
+        //$contacts = Contact::all();
+        $contacts = Contact::getContacts();
         return view('contacts.index', compact('contacts'));
     }
 
-    /**
-     * @return \Illuminate\Http\Response
-     */
-    protected function create() 
+    protected function create(): View
     {
         $tags = Tag::pluck('name', 'id');
         return view('contacts.create', compact('tags'));
     }
 
-    /**
-     * @return \Illuminate\Http\JsonResponse
-     */
-    protected function store(ContactForm $form) 
+    protected function store(ContactForm $form): JsonResponse
     {
-        $name = $this->upload();
-        
-        $contact = Contact::create(['email' => request('email'), 'profile_image' => $name]);
-        $this->addTel($contact, request('telephone_number_new'));
+        if ($form->profile_image) {
+            $image = $this->uploadImage();
+        }
+        $contact = Contact::create(['email' => request('email'), 'profile_image' => $image ?? null]);
+        $contact->addTel($contact, request('telephone_number_new'));
         $contact->tags()->sync(request('tags_id'));
-        
-        return response()->json(['route'=> route('contacts.index')]); 
+        Session::flash('success', 'You have successfully created a contact.');
+
+        return response()->json(['route' => route('contacts.index')]);
     }
 
-    /**
-     * @return \Illuminate\Http\Response
-     */
-    protected function show(Contact $contact)
+    protected function show(Contact $contact): View
     {
         return view('contacts.show', compact('contact'));
     }
 
-    /**
-     * @return \Illuminate\Http\Response
-     */
-    protected function edit(Contact $contact) 
+    protected function edit(Contact $contact): View
     {
         $tags = Tag::pluck('name', 'id');
         return view('contacts.edit', compact('contact', 'tags'));
     }
 
-    /**
-     * @return \Illuminate\Http\JsonResponse
-     */
-    protected function update(ContactForm $form, Contact $contact) 
-    {   
-        if($form->profile_image){
-            
-            $name = $this->upload();
-            unlink("images/$contact->profile_image");
-            $contact->update(['email' => request('email'), 'profile_image' => $name]);  
-            
-        }else{
-            $contact->update(request(['email']));
-        }   
-        
+    protected function update(ContactForm $form, Contact $contact)
+    {
+        if ($form->profile_image){
+            $image = $this->uploadImage();
+            $image_path = public_path("images/$contact->profile_image");
+            if (file_exists($image_path)) {
+                unlink($image_path);
+            }
+        }
+        $contact->update(['email' => request('email'), 'profile_image' => $image ?? $contact->profile_image]);
         $contact->tags()->sync(request('tags_id'));
-        
         $contact->updateTels(request('telephone_number'));
-        $this->addTel($contact, request('telephone_number_new'));    
-        
-        return response()->json(['route'=> route('contacts.index')]);
+        $contact->addTel($contact, request('telephone_number_new'));
+        Session::flash('success', 'You have successfully edited a contact.');
+
+        return response()->json(['route' => route('contacts.index')]);
     }
 
-    /**
-     * @return \Illuminate\Http\Response
-     */
-    protected function destroy(Contact $contact) 
+    protected function destroy(Contact $contact): RedirectResponse
     {
         $contact->delete();
-        
-        if(file_exists("images/$contact->profile_image")){
-            unlink("images/$contact->profile_image");
+
+        if ($contact->profile_image) {
+            $image_path = public_path("images/$contact->profile_image");
+            if (file_exists($image_path)) {
+                unlink($image_path);
+            }
         }
-        
+
         return back()->withSuccess('Successfully deleted contact.');
     }
-    
-    private function addTel(Contact $contact, array $tels = null): void
+
+    private function uploadImage(): string
     {
-        if(!empty($tels)){
-            foreach($tels as $value){
-              $contact->addTelephoneNumber(new TelephoneNumber(['number'=> $value]));
-            }
-        }    
-    }
-    
-    private function upload(): string
-    {   
         $image = request('profile_image');
-        $name = time().'.'.$image->extension();
+        $name = Contact::generateUniqueImageName() . '.' . $image->extension();
         $image->move(public_path('images'), $name);
-        
+
         return $name;
     }
+
+    protected function emailExists(Request $request): JsonResponse
+    {
+        $id = $request->get('id');
+        $email = $request->get('email');
+        if ($id) {
+            $contact = Contact::findOrFail($id);
+            if ($contact and $contact->email == $email) {
+                return response()->json(true);
+            }
+        }
+        $contact = Contact::where('email', $email)->first();
+        $contact ? $res = false : $res = true;
+
+        return response()->json($res);
+    }
+
 }
