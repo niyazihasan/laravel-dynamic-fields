@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Session;
 use Illuminate\Http\{RedirectResponse, JsonResponse, Request};
 use Illuminate\View\View;
 use App\{Tag, Contact};
@@ -10,6 +9,11 @@ use App\Http\Requests\ContactForm;
 
 class ContactController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('prevent.back.history');
+    }
+
     protected function index(): View
     {
         //$contacts = Contact::all();
@@ -31,7 +35,7 @@ class ContactController extends Controller
         $contact = Contact::create(['email' => request('email'), 'profile_image' => $image ?? null]);
         $contact->addTel($contact, request('telephone_number_new'));
         $contact->tags()->sync(request('tags_id'));
-        Session::flash('success', 'You have successfully created a contact.');
+        session()->flash('success', 'You have successfully created a contact.');
 
         return response()->json(['route' => route('contacts.index')]);
     }
@@ -47,9 +51,9 @@ class ContactController extends Controller
         return view('contacts.edit', compact('contact', 'tags'));
     }
 
-    protected function update(ContactForm $form, Contact $contact)
+    protected function update(ContactForm $form, Contact $contact): JsonResponse
     {
-        if ($form->profile_image){
+        if ($form->profile_image) {
             $image = $this->uploadImage();
             $image_path = public_path("images/$contact->profile_image");
             if (file_exists($image_path)) {
@@ -60,7 +64,7 @@ class ContactController extends Controller
         $contact->tags()->sync(request('tags_id'));
         $contact->updateTels(request('telephone_number'));
         $contact->addTel($contact, request('telephone_number_new'));
-        Session::flash('success', 'You have successfully edited a contact.');
+        session()->flash('success', 'You have successfully edited a contact.');
 
         return response()->json(['route' => route('contacts.index')]);
     }

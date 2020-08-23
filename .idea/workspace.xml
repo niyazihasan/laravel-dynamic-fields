@@ -13,34 +13,31 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:newplace" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e83d411-d195-425f-82e0-45f7e8d18b9b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Contact.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/PreventBackHistory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ContactForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ContactForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/TelephoneNumber.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TelephoneNumber.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_31_070859_create_contact_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_31_070859_create_contact_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_31_073137_create_telephone_number_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_31_073137_create_telephone_number_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/478750dcb838176e0e7b1c3a69211d4b.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/633c150a3d6a7968dfd3dd3a5e58a126.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/699ed6a38a7f3a8de1bd3b8728763c47.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/813a651bb5280a09a24787a64d62d356.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/0257388dcc0f05bde932391640d12298.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/c5cd0084f2b6a2692aabccfb2665d658.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contacts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contacts/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contacts/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contacts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contacts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +120,11 @@
       <workItem from="1598120669667" duration="30000" />
       <workItem from="1598120706339" duration="1686000" />
       <workItem from="1598122522924" duration="488000" />
-      <workItem from="1598123295454" duration="1768000" />
+      <workItem from="1598123295454" duration="2626000" />
+      <workItem from="1598165568447" duration="541000" />
+      <workItem from="1598166946334" duration="181000" />
+      <workItem from="1598167222661" duration="409000" />
+      <workItem from="1598167692513" duration="3866000" />
     </task>
     <servers />
   </component>
@@ -135,7 +136,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

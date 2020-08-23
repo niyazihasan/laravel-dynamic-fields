@@ -41,18 +41,11 @@ $(function () {
                     type: "post"
                 }
             },
-            profile_image: {
-                extension: "jpg,jpeg,png",
-                checkSize: 200000
-            }
+            profile_image: {extension: "jpg,jpeg,png", checkSize: 200000}
         },
         messages: {
-            email: {
-                remote: "Email cannot be used."
-            },
-            profile_image: {
-                extension: "Please upload file in these format only (jpg, jpeg, png)."
-            }
+            email: {remote: "Email cannot be used."},
+            profile_image: {extension: "Please upload file in these format only (jpg, jpeg, png)."}
         },
         highlight: function (element) {
             jQuery(element).closest('.form-control').addClass('is-invalid');
