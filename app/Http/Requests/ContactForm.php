@@ -21,17 +21,9 @@ class ContactForm extends FormRequest
             //'tags_id' => 'required',
         ];
 
-        //existing number field
         if (!empty($this->request->get('telephone_number'))) {
             foreach ($this->request->get('telephone_number') as $key => $value) {
                 $rules["telephone_number.{$key}"] = 'required|digits:10|starts_with:0';
-            }
-        }
-
-        // dynamic numbers fields
-        if (!empty($this->request->get('telephone_number_new'))) {
-            foreach ($this->request->get('telephone_number_new') as $key => $value) {
-                $rules["telephone_number_new.{$key}"] = 'required|digits:10|starts_with:0';
             }
         }
 

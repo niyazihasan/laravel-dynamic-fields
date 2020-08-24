@@ -17,24 +17,17 @@ class Contact extends Model
         $this->telephoneNumbers()->save($number);
     }
 
-    private function deleteTels(array $ids): void
-    {
-        $this->telephoneNumbers()->whereNotIn('id', $ids)->delete();
-    }
-
-    public function updateTels(array $numbers): void
+    public function updateTels(Contact $contact, array $numbers): void
     {
         if(!empty($numbers)){
-            foreach($numbers as $k=>$v){
-                $telephoneNumber = TelephoneNumber::findOrFail($k);
-                $this->telephoneNumbers()->where('id', $telephoneNumber->id)->update(['number' => $v]);
-                $ids[] = [$telephoneNumber->id];
+            foreach($this->telephoneNumbers as $number){
+                $number->delete();
             }
-            $this->deleteTels($ids);
+            $this->addTel($contact, $numbers);
         }
     }
 
-    public function addTel(Contact $contact, array $tels = null): void
+    public function addTel(Contact $contact, $tels = null): void
     {
         if (!empty($tels)) {
             foreach ($tels as $value) {
@@ -58,12 +51,27 @@ class Contact extends Model
         return md5(uniqid());
     }
 
-    public function scopeGetContacts(): Collection
+    public function scopeGetContacts($query): Collection
     {
-        return $this::leftJoin('telephone_number', 'telephone_number.contact_id', '=', 'contact.id')
+        return $query->leftJoin('telephone_number', 'telephone_number.contact_id', '=', 'contact.id')
             ->select('contact.id', 'contact.profile_image', 'contact.email')
             ->groupBy('contact.id')
             ->orderBy('contact.id', 'desc')
             ->get();
+    }
+
+    public function getTelephoneNumbers(): string
+    {
+        return $this->telephoneNumbers->implode('number',', ');
+    }
+
+    public function getTags(): string
+    {
+        return $this->tags->implode('name',', ');
+    }
+
+    public function scopeSort($query, $column, $sort): Collection
+    {
+        return $query->orderBy($column, $sort)->get();
     }
 }

@@ -6,6 +6,10 @@ select.form-control[multiple], select.form-control[size]{
     overflow: auto;
 }
 
+.error {
+    color: red;
+}
+
 .message {
     display: flex;
     position: fixed;

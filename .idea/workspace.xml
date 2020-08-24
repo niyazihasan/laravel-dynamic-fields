@@ -30,14 +30,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e83d411-d195-425f-82e0-45f7e8d18b9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/PreventBackHistory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/4ffd6941af911a6235b4b351b971fe94.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/6dc6c3c60ebee0bca3a2b5b967c1fac6.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/aa605c198f144562dff2d844d80375f8.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/b727f419ccdbe230b861aa32d9c2bbae.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/f985d7a1af06cd741847defd22324ef0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/contacts/ajax-table-sort.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Contact.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/0257388dcc0f05bde932391640d12298.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/c5cd0084f2b6a2692aabccfb2665d658.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ContactForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ContactForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/163343.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/163343.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/contacts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/contacts/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/contacts/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/contacts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/contacts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +86,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -85,11 +98,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\laravel-dynamic-fields\public\js" />
       <recent name="C:\wamp64\www\laravel-dynamic-fields\public\css" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\laravel-dynamic-fields\public" />
       <recent name="C:\wamp64\www\laravel-dynamic-fields\public\js" />
       <recent name="C:\wamp64\www\laravel-dynamic-fields\public\css" />
     </key>
@@ -124,7 +138,10 @@
       <workItem from="1598165568447" duration="541000" />
       <workItem from="1598166946334" duration="181000" />
       <workItem from="1598167222661" duration="409000" />
-      <workItem from="1598167692513" duration="3866000" />
+      <workItem from="1598167692513" duration="4240000" />
+      <workItem from="1598172629002" duration="32624000" />
+      <workItem from="1598210904014" duration="10768000" />
+      <workItem from="1598254289237" duration="21028000" />
     </task>
     <servers />
   </component>
@@ -173,6 +190,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1597928433025" />
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1598181906238">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1598181906238" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1598123346500">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -185,10 +206,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1598124935934" />
-    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598025280851">
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598260363353">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1598025280851" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1598260363353" />
     <state x="287" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598008130574">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
