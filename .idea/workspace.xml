@@ -30,27 +30,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e83d411-d195-425f-82e0-45f7e8d18b9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/4ffd6941af911a6235b4b351b971fe94.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/6dc6c3c60ebee0bca3a2b5b967c1fac6.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/aa605c198f144562dff2d844d80375f8.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/b727f419ccdbe230b861aa32d9c2bbae.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/f985d7a1af06cd741847defd22324ef0.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/contacts/ajax-table-sort.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ContactForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ContactForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/163343.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/163343.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contacts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contacts/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contacts/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contacts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contacts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +123,7 @@
       <workItem from="1598167692513" duration="4240000" />
       <workItem from="1598172629002" duration="32624000" />
       <workItem from="1598210904014" duration="10768000" />
-      <workItem from="1598254289237" duration="21028000" />
+      <workItem from="1598254289237" duration="22208000" />
     </task>
     <servers />
   </component>

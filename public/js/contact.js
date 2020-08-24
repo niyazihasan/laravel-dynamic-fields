@@ -32,7 +32,6 @@ $(function () {
             $(this).closest('.form-group').find('label.error').remove();
             let numberPattern = new RegExp(/^[0][0-9]{9}$/);
             let number = numberPattern.test($(this).val());
-            console.log(6);
             if (number == false) {
                 flag = false;
                 $(this).closest('.form-group').append('<label id="telephone_number' + i + '-error" class="error">The field must be 10 digits and start with one of the following: 0</label>');
